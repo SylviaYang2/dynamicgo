@@ -392,9 +392,9 @@ func (self Value) MarshalTo(to *thrift.TypeDescriptor, opts *Options) ([]byte, e
 func marshalTo(read *thrift.BinaryProtocol, write *thrift.BinaryProtocol, from *thrift.TypeDescriptor, to *thrift.TypeDescriptor, opts *Options) error {
 	switch t := to.Type(); t {
 	case thrift.STRUCT:
-		if from == to {
-			return nil
-		}
+		//if from == to {
+		//	return nil
+		//}
 		var req *thrift.RequiresBitmap
 		if !opts.NotCheckRequireNess {
 			req = thrift.NewRequiresBitmap()
